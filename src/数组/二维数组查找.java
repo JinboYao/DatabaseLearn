@@ -1,4 +1,4 @@
-package src;
+package src.数组;
 
 public class 二维数组查找 {
     public static void main(String[] args) {
