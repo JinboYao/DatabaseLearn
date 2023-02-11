@@ -55,7 +55,7 @@ public class 连续子数组最大和 {
         return Arrays.copyOfRange(array,start,end);
     }
     //解法二
-    public int[] FindGreatestSumOfSubArray (int[] array) {
+    public int[] FindGreatestSumOfSubArray2 (int[] array) {
         // write code here
         int n=array.length;
         int res=array[0],tmp=array[0],start=0,end=1,gap=0;
