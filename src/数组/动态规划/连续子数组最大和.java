@@ -2,6 +2,12 @@ package src.数组.动态规划;
 
 import java.util.Arrays;
 
+//最简python算法
+//def maxSubArray(self, nums: List[int]) -> int:
+//        for i in range(1,len(nums)):
+//        nums[i]+=max(nums[i-1],0)
+//        return max(nums)
+
 public class 连续子数组最大和 {
     //解法一
     public int FindGreatestSumOfSubArray(int[] array){
