@@ -81,4 +81,21 @@ public class 连续子数组最大和 {
         }
         return Arrays.copyOfRange(array,start,end);
     }
+
+    //2024/3/24
+    public int maxSubArray(int[] nums) {
+        int n = nums.length;
+        int[] dp = new int[n];
+        dp[0]= nums[0];
+        int result= nums[0];
+        for(int i=1;i<n;i++){
+            if(dp[i-1]<0){
+                dp[i] =nums[i];
+            }else{
+                dp[i] = dp[i-1]+nums[i];
+            }
+            result = Math.max(dp[i],result);
+        }
+        return result;
+    }
 }

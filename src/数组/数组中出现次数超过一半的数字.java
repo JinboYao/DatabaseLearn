@@ -6,18 +6,19 @@ public class 数组中出现次数超过一半的数字 {
         return nums[nums.length/2];
     }
     // 解法二：
-    public int majorityElement(int[] nums) {
-        int n=nums.length;
+    public int MoreThanHalfNum_Solution (int[] numbers) {
+        // write code here
+        int res=-1;
+        int n=numbers.length;
         HashMap<Integer,Integer> map=new HashMap<>();
-        for(int num:nums){
-            if(map.containsKey(num)){
-                map.put(num,map.get(num)+1);
-            }else{
-                map.put(num,1);
+        for(int i=0;i<n;i++){
+            int cnt=map.getOrDefault(numbers[i],0)+1;
+            if(cnt >n/2){
+                res = numbers[i];
             }
-            if(map.get(num)>n/2) return num;
+            map.put(numbers[i],cnt);
         }
-        return -1;
+        return res;
     }
     // 解法三：摩尔投票
     //最坏结果：数字被消耗到只剩最后一个
